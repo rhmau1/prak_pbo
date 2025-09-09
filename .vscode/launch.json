@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "SepedaDemo",
+            "request": "launch",
+            "mainClass": "SepedaDemo",
+            "projectName": "prak_pbo_812ccf1e"
+        },
+        {
+            "type": "java",
+            "name": "TampilPersegi",
+            "request": "launch",
+            "mainClass": "TampilPersegi",
+            "projectName": "prak_pbo_812ccf1e"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "jobsheet1.Tugas.Demo",
+            "projectName": "prak_pbo_812ccf1e"
+        },
+        {
+            "type": "java",
+            "name": "TestBarang",
+            "request": "launch",
+            "mainClass": "jobsheet2.TestBarang",
+            "projectName": "prak_pbo_812ccf1e"
+        },
+        {
+            "type": "java",
+            "name": "TestMahasiswa",
+            "request": "launch",
+            "mainClass": "jobsheet2.TestMahasiswa",
+            "projectName": "prak_pbo_812ccf1e"
+        },
+        {
+            "type": "java",
+            "name": "TestPeminjaman",
+            "request": "launch",
+            "mainClass": "jobsheet2.tugas.TestPeminjaman",
+            "projectName": "prak_pbo_812ccf1e"
+        }
+    ]
+}
