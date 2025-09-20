@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainPercobaan4",
+      "request": "launch",
+      "mainClass": "percobaan4.MainPercobaan4",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "MainPercobaan3",
+      "request": "launch",
+      "mainClass": "percobaan3.MainPercobaan3",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "MainPertanyaan",
+      "request": "launch",
+      "mainClass": "percobaan3.MainPertanyaan",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "MainPercobaan2",
+      "request": "launch",
+      "mainClass": "percobaan2.MainPercobaan2",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "MainPercobaan1",
+      "request": "launch",
+      "mainClass": "fijri.MainPercobaan1",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "TestKoperasi",
       "request": "launch",
       "mainClass": "jobsheet3.TestKoperasi",
