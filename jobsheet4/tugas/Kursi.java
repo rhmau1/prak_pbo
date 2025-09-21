@@ -1,8 +1,8 @@
-package percobaan4;
+package tugas;
 
 public class Kursi {
     private String nomor;
-    private Penumpang penumpang;
+    private Pengunjung pengunjung;
 
     Kursi(String nomor) {
         this.nomor = nomor;
@@ -16,19 +16,19 @@ public class Kursi {
         return nomor;
     }
 
-    public void setPenumpang(Penumpang penumpang) {
-        this.penumpang = penumpang;
+    public void setPengunjung(Pengunjung pengunjung) {
+        this.pengunjung = pengunjung;
     }
 
-    public Penumpang getPenumpang() {
-        return penumpang;
+    public Pengunjung getPengunjung() {
+        return pengunjung;
     }
 
     public String info() {
         String info = "";
         info += "Nomor: " + nomor + " \n";
-        if (this.penumpang != null) {
-            info += "penumpang: \n" + penumpang.info() + " \n";
+        if (this.pengunjung != null) {
+            info += "pengunjung: \n" + pengunjung.info() + " \n";
 
         }
         return info;

@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "tugas.Main",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "MainPercobaan1",
+      "request": "launch",
+      "mainClass": "percobaan1.MainPercobaan1",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "MainPercobaan4",
       "request": "launch",
       "mainClass": "percobaan4.MainPercobaan4",

@@ -25,6 +25,7 @@ public class Gerbong {
     }
 
     public void setPenumpang(Penumpang penumpang, int nomor) {
+        // this.arrayKursi[nomor - 1].setPenumpang(penumpang);
         Kursi kursi = this.arrayKursi[nomor - 1]; // ambil kursi sesuai nomor
 
         if (kursi.getPenumpang() == null) {
