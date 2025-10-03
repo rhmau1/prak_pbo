@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainTugas",
+      "request": "launch",
+      "mainClass": "jobsheet6.MainTugas",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Percobaan4",
+      "request": "launch",
+      "mainClass": "jobsheet6.Percobaan4",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Percobaan3",
+      "request": "launch",
+      "mainClass": "jobsheet6.Percobaan3",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Percobaan2",
+      "request": "launch",
+      "mainClass": "jobsheet6.Percobaan2",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Percobaan1",
+      "request": "launch",
+      "mainClass": "jobsheet6.Percobaan1",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "tugas.Main",
