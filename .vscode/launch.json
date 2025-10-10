@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Tugas2",
+      "request": "launch",
+      "mainClass": "jobsheet7.Tugas2",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Segitiga",
+      "request": "launch",
+      "mainClass": "jobsheet7.Segitiga",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Fish",
+      "request": "launch",
+      "mainClass": "jobsheet7.Fish",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Perkalianku",
+      "request": "launch",
+      "mainClass": "jobsheet7.Perkalianku",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Utama",
+      "request": "launch",
+      "mainClass": "jobsheet7.Utama",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "MainTugas",
       "request": "launch",
       "mainClass": "jobsheet6.MainTugas",
