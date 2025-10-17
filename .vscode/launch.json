@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Program",
+      "request": "launch",
+      "mainClass": "jobsheet9.percobaan2.Program",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Program",
+      "request": "launch",
+      "mainClass": "jobsheet9.Program",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "Tugas2",
       "request": "launch",
       "mainClass": "jobsheet7.Tugas2",
