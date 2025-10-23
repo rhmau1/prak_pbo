@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SimulasiPertanian",
+      "request": "launch",
+      "mainClass": "SimulasiPertanian",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "Program",
       "request": "launch",
       "mainClass": "jobsheet9.percobaan2.Program",
