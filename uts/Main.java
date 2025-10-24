@@ -1,5 +1,3 @@
-
-// File: Main.java
 import java.util.*;
 
 public class Main {
@@ -42,7 +40,8 @@ public class Main {
             System.out.println("7. Panen & Simpan ke Gudang");
             System.out.println("8. Jual Hasil Panen ke Toko");
             System.out.println("9. Lihat Gudang & Lahan");
-            System.out.println("10. Lanjut ke Hari Berikutnya");
+            System.out.println("10.Cek Growth Tanaman");
+            System.out.println("11.Lanjut ke Hari Berikutnya");
             System.out.println("0. Keluar");
             System.out.println("==================================================");
             System.out.print("Pilih aksi: ");
@@ -58,13 +57,16 @@ public class Main {
                 case 7 -> panen(farmer);
                 case 8 -> jualHasilPanen(farmer, shop);
                 case 9 -> lihatStatus(farmer, shop);
-                case 10 -> {
+                case 10 -> cekGrowthTanaman(sc, farmer);
+                case 11 -> {
                     farmer.simulateDay(weather);
                     randomEventBuyer(buyer, shop);
                     time.advanceDay();
                     System.out.println("Hari berganti...");
                     pause(sc);
+
                 }
+
                 case 0 -> {
                     running = false;
                     System.out.println("Terima kasih telah bermain!");
@@ -119,21 +121,47 @@ public class Main {
     static void tanamBibit(Scanner sc, Farmer farmer) {
         System.out.println("=== TANAM BIBIT ===");
         farmer.showInventory();
+
         System.out.print("Masukkan ID lahan tempat menanam (1 dst): ");
         int id = validInt(sc);
+
         System.out.print("Pilih nama bibit yang akan ditanam: ");
-        String nama = sc.next();
-        Plant tanaman = switch (nama.toLowerCase()) {
+        String nama = sc.next().toLowerCase();
+
+        // Cari bibit di inventory
+        Item bibitDipilih = null;
+        for (Item item : farmer.inventory) { // karena inventory protected, bisa diakses di sini
+            if (item.getName().equalsIgnoreCase(nama)) {
+                bibitDipilih = item;
+                break;
+            }
+        }
+
+        if (bibitDipilih == null) {
+            System.out.println("Bibit '" + nama + "' tidak ada di inventory.");
+            pause(sc);
+            return;
+        }
+
+        // Buat objek tanaman berdasarkan nama
+        Plant tanaman = switch (nama) {
             case "padi" -> new Padi();
             case "jagung" -> new Jagung();
             case "tomat" -> new Tomat();
             default -> null;
         };
+
         if (tanaman == null) {
             System.out.println("Bibit tidak dikenal.");
         } else {
+            // Hapus bibit dari inventory setelah digunakan
+            farmer.inventory.remove(bibitDipilih);
+
+            // Tanam di lahan
             farmer.plantSeed(id, tanaman);
+            System.out.println("Bibit " + tanaman.getName() + " berhasil ditanam di lahan #" + id + ".");
         }
+
         pause(sc);
     }
 
@@ -158,6 +186,55 @@ public class Main {
         System.out.print("Masukkan ID lahan: ");
         int id = validInt(sc);
         farmer.treatPests(id);
+        pause(sc);
+    }
+
+    static void cekGrowthTanaman(Scanner sc, Farmer farmer) {
+        System.out.println("=== CEK PERTUMBUHAN TANAMAN & STATUS PANEN ===");
+
+        if (farmer.getLands().isEmpty()) {
+            System.out.println("Anda belum memiliki lahan.");
+            pause(sc);
+            return;
+        }
+
+        // Tampilkan daftar lahan yang dimiliki
+        System.out.println("Daftar Lahan yang Anda Miliki:");
+        for (Land l : farmer.getLands()) {
+            System.out.println(l);
+        }
+
+        System.out.print("Masukkan ID lahan yang ingin dicek status panennya: ");
+        int id = validInt(sc);
+
+        // Cari lahan berdasarkan ID
+        Land targetLand = null;
+        for (Land l : farmer.getLands()) {
+            // Asumsi ID Land dimulai dari 1 dan digunakan di awal toString()
+            if (l.toString().startsWith("Lahan#" + id)) {
+                targetLand = l;
+                break;
+            }
+        }
+
+        if (targetLand != null) {
+            System.out.println("\nMemeriksa Lahan #" + id + "...");
+
+            if (!targetLand.isEmpty()) {
+                // Panggil getPlant() (Memerlukan Land.getPlant())
+                Plant plantToCheck = targetLand.getPlant();
+
+                if (plantToCheck != null) {
+                    // PANGGILAN KUNCI: isReadyToHarvest() akan mencetak pesan jika kondisi
+                    // terpenuhi.
+                    plantToCheck.isReadyToHarvest();
+                }
+            } else {
+                System.out.println("Lahan #" + id + " kosong, tidak ada tanaman untuk dicek.");
+            }
+        } else {
+            System.out.println("Lahan dengan ID " + id + " tidak ditemukan.");
+        }
         pause(sc);
     }
 

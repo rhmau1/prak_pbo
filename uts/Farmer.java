@@ -1,5 +1,3 @@
-
-// File: Farmer.java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +24,13 @@ public class Farmer extends Player {
     }
 
     public void plantSeed(int landId, Plant p) {
+        int energyCost = 3; // contoh biaya energi untuk menanam
+        if (energy < energyCost) {
+            System.out.println(name + " tidak cukup energi untuk menanam benih.");
+            return;
+        }
+        energy -= energyCost;
+        System.out.println("sisa energi " + name + ": " + energy);
         Land l = getLandById(landId);
         if (l == null) {
             System.out.println("Lahan tidak ditemukan.");
@@ -35,6 +40,13 @@ public class Farmer extends Player {
     }
 
     public void waterLand(int landId) {
+        int energyCost = 3; // contoh biaya energi untuk menanam
+        if (energy < energyCost) {
+            System.out.println(name + " tidak cukup energi untuk menanam benih.");
+            return;
+        }
+        energy -= energyCost;
+        System.out.println("sisa energi " + name + ": " + energy);
         Land l = getLandById(landId);
         if (l == null)
             return;
@@ -42,6 +54,13 @@ public class Farmer extends Player {
     }
 
     public void fertilizeLand(int landId) {
+        int energyCost = 3; // contoh biaya energi untuk menanam
+        if (energy < energyCost) {
+            System.out.println(name + " tidak cukup energi untuk menanam benih.");
+            return;
+        }
+        energy -= energyCost;
+        System.out.println("sisa energi " + name + ": " + energy);
         Land l = getLandById(landId);
         if (l == null)
             return;
@@ -49,6 +68,13 @@ public class Farmer extends Player {
     }
 
     public void treatPests(int landId) {
+        int energyCost = 3; // contoh biaya energi untuk menanam
+        if (energy < energyCost) {
+            System.out.println(name + " tidak cukup energi untuk menanam benih.");
+            return;
+        }
+        energy -= energyCost;
+        System.out.println("sisa energi " + name + ": " + energy);
         Land l = getLandById(landId);
         if (l == null)
             return;
@@ -56,6 +82,13 @@ public class Farmer extends Player {
     }
 
     public void harvestToStorage(int landId) {
+        int energyCost = 3; // contoh biaya energi untuk menanam
+        if (energy < energyCost) {
+            System.out.println(name + " tidak cukup energi untuk menanam benih.");
+            return;
+        }
+        energy -= energyCost;
+        System.out.println("sisa energi " + name + ": " + energy);
         Land l = getLandById(landId);
         if (l == null)
             return;
@@ -74,6 +107,11 @@ public class Farmer extends Player {
     }
 
     public void simulateDay(Weather w) {
+        energy += 10;
+        if (energy > 100) {
+            energy = 100;
+        }
+        System.out.println("sudah istirahat. sisa energi " + name + ": " + energy);
         for (Land l : lands) {
             l.simulateGrowth(w);
         }

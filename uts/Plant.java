@@ -1,4 +1,3 @@
-
 import java.util.Random;
 
 public abstract class Plant implements Item {
@@ -59,8 +58,17 @@ public abstract class Plant implements Item {
         }
     }
 
+    // public boolean isReadyToHarvest() {
+    // return daysGrown >= timeToHarvest || growth >= 90;
+    // }
     public boolean isReadyToHarvest() {
-        return daysGrown >= timeToHarvest || growth >= 90;
+        boolean ready = daysGrown >= timeToHarvest || growth >= 90;
+        if (ready) {
+            System.out.println(name + " siap dipanen!");
+        } else {
+            System.out.println(name + " belum siap dipanen.");
+        }
+        return ready;
     }
 
     public Harvest harvest() {

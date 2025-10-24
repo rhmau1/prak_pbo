@@ -1,4 +1,3 @@
-// File: Land.java
 public class Land {
     private int id;
     private double size; // ukuran
@@ -26,6 +25,10 @@ public class Land {
         this.plant = p;
         System.out.println("Menanam " + p.getName() + " di lahan " + id);
         return true;
+    }
+
+    public Plant getPlant() {
+        return plant;
     }
 
     public void water() {
