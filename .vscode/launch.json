@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Tester",
+      "request": "launch",
+      "mainClass": "jobsheet10.Tugas.Tester",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Tester4",
+      "request": "launch",
+      "mainClass": "jobsheet10.Tester4",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Tester2",
+      "request": "launch",
+      "mainClass": "jobsheet10.Tester2",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Tester1",
+      "request": "launch",
+      "mainClass": "jobsheet10.Tester1",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "TestElektronik",
+      "request": "launch",
+      "mainClass": "teori10.TestElektronik",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "TestBayaran",
+      "request": "launch",
+      "mainClass": "teori10.TestBayaran",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "SimulasiPertanian",
       "request": "launch",
       "mainClass": "SimulasiPertanian",

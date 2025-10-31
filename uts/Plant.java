@@ -58,9 +58,6 @@ public abstract class Plant implements Item {
         }
     }
 
-    // public boolean isReadyToHarvest() {
-    // return daysGrown >= timeToHarvest || growth >= 90;
-    // }
     public boolean isReadyToHarvest() {
         boolean ready = daysGrown >= timeToHarvest || growth >= 90;
         if (ready) {

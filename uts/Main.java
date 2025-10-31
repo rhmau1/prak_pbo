@@ -285,6 +285,7 @@ public class Main {
         if (Math.random() < 0.4) {
             System.out.println(buyer.getName() + " datang ke toko dan membeli bibit Tomat.");
             buyer.buyFromShop(shop, "Tomat");
+            System.out.println("sisa uang " + buyer.getName() + ": " + buyer.getMoney());
         }
     }
 
