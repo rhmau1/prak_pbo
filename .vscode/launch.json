@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FormCustomBaju",
+      "request": "launch",
+      "mainClass": "kuis2.FormCustomBaju",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "PosFrame",
+      "request": "launch",
+      "mainClass": "jobsheet11.PosFrame",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "Buttons",
+      "request": "launch",
+      "mainClass": "jobsheet11.Buttons",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "SimpleWindow",
+      "request": "launch",
+      "mainClass": "jobsheet11.SimpleWindow",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
+      "name": "SimpleFrame",
+      "request": "launch",
+      "mainClass": "jobsheet11.SimpleFrame",
+      "projectName": "prak_pbo_812ccf1e"
+    },
+    {
+      "type": "java",
       "name": "Tester",
       "request": "launch",
       "mainClass": "jobsheet10.Tugas.Tester",
